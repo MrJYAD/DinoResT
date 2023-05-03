@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="DinoDiner.PointOfSale.MenuItemSelectionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DinoDiner.PointOfSale"
+             mc:Ignorable="d" 
+         d:DesignHeight="450" d:DesignWidth="600">
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="GrayAndWhite" StartPoint="0,0.6" EndPoint="0,1">
+            <GradientStop Color="White" Offset="0" />
+            <GradientStop Color="Gray" Offset="5" />
+        </LinearGradientBrush>
+        <Style x:Key="SelectionButton" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource GrayAndWhite}" />
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="150"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                    <Setter Property="BorderThickness" Value="4,4,4,4"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" FontWeight="Medium" FontSize="20" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center">Burgers</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="0" FontWeight="Medium" FontSize="20" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center" Height="28" Width="192"> Sides</TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="0" FontWeight="Medium" FontSize="20" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Center">Other Entrees</TextBlock>
+        <TextBlock Grid.Row="3" FontWeight="Medium" FontSize="20" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="169,83,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2">Drinks</TextBlock>
+        <Button Click="OnAllosaurusAllAmericanButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="0" Grid.Row="0" VerticalAlignment="Bottom" >
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center"  >Allosaurus All-American</TextBlock>
+        </Button>
+        <Button Click="OnCarnotaurusCheeseburgerButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="0" Grid.Row="1" >
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Carnotaurus Cheeseburger</TextBlock>
+        </Button>
+        <Button Click="OnDeinonychusDoubleButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="0" Grid.Row="2" >
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Deinonychus Double</TextBlock>
+        </Button>
+        <Button Click="OnTRexTripleburgerButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="0" Grid.Row="3" >
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">T-Rex Triple Burger</TextBlock>
+        </Button>
+        <Button Click="OnBrontowurstButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="2" Grid.Row="0" VerticalAlignment="Bottom" Margin="10,0,6,7" >
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Brontowurst</TextBlock>
+        </Button>
+        <Button Click="OnPrehistoricPBJButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="2" Grid.Row="1" >
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Prehistoric PBJ</TextBlock>
+        </Button>
+        <Button Click="OnPterodactylWingsButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="2" Grid.Row="2" >
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Pterodactyl Wings</TextBlock>
+        </Button>
+        <Button Click ="OnVelociWraptorButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="2" Grid.Row="3" >Veloci-Wraptor</Button>
+        <Button Click="OnFryceritopsButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" Margin="10,33,7,0">Fryceritops</Button>
+        <Button Click="OnMeteorMacAndCheeseButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="10,0,7,0">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Meteor Mac &amp; Cheese</TextBlock>
+        </Button>
+        <Button Click="OnMezzorellaSticksButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="7,0,10,0">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Mezzorella Sticks</TextBlock>
+        </Button>
+        <Button Click="OnTriceritotsButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="1" Grid.Row="3" Margin="12,19,8,19" >
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Triceritots</TextBlock>
+        </Button>
+        <Button Click="OnPlilosodaButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="0" Grid.Row="4" Margin="25,19,25,21" >
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Plilosoda</TextBlock>
+        </Button>
+        <Button Click="OnCretaceousCoffeeButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="1" Grid.Row="4" Margin="26,19,24,21" >
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Cretaceous Coffee</TextBlock>
+        </Button>
+        <Button Click="OnDinoNuggetsButtonClick" Style="{DynamicResource SelectionButton}" Grid.Column="2" Grid.Row="4" Margin="25,19,25,21" >
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">DinoNuggets</TextBlock>
+        </Button>
+    </Grid>
+</UserControl>
